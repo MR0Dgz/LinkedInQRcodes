@@ -1,43 +1,43 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
-
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team LinkedIn Tree</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #0A66C2;
+    }
+    a {
+      display: block;
+      margin: 1rem auto;
+      padding: 1rem;
+      width: 90%;
+      max-width: 400px;
+      background: white;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #0A66C2;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    a:hover {
+      background: #e6f0ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Connect with Our Team</h1>
+  <a href="https://www.linkedin.com/in/marcelo-rodriguez-6357a3221" target="_blank">Marcelo Rodriguez</a>
+  <a href="https://www.linkedin.com/in/kalea-knox/" target="_blank">Kalea Knox</a>
+  <a href="https://www.linkedin.com/in/yahir-badillo-a69856232/" target="_blank">Yahir Badillo</a>
+  <a href="https://www.linkedin.com/in/aliyys/" target="_blank">Aliyys</a>
+  <a href="https://www.linkedin.com/in/sandra-arredondo-0b5262363/" target="_blank">Sandra Arredondo</a>
+</body>
+</html>
